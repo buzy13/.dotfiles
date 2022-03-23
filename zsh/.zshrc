@@ -83,6 +83,7 @@ plugins=(
   git
   zsh-autosuggestions
   fast-syntax-highlighting
+#  asdf
   )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,3 +118,5 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. /usr/local/opt/asdf/libexec/asdf.sh
