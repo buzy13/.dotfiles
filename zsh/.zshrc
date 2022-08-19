@@ -120,3 +120,7 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 . /usr/local/opt/asdf/libexec/asdf.sh
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
