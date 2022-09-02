@@ -1,0 +1,5 @@
+[user]
+	email = stefanbuzarnescu@protonmail.com
+	name = buzy13
+[core]
+	excludesfile = /Users/buzy/.gitignore_global
