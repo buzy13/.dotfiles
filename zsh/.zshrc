@@ -78,13 +78,12 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# zsh-syntax-highlighting
 plugins=(
   git
   zsh-autosuggestions
   fast-syntax-highlighting
 #  asdf
-  )
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,10 +116,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /usr/local/opt/asdf/libexec/asdf.sh
-
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)

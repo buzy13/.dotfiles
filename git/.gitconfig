@@ -1,5 +1,7 @@
 [user]
 	email = stefanbuzarnescu@protonmail.com
 	name = buzy13
+[credential]
+	helper = osxkeychain
 [core]
-	excludesfile = /Users/buzy/.gitignore_global
+	excludesfile = /Users/stefanbuzarnescu/.gitignore_global

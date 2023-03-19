@@ -1,16 +1,20 @@
 
-# MacPorts Installer addition on 2017-12-31_at_17:13:52: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.8.jdk/Contents/Home
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.2.jdk/Contents/Home
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-export PATH_TO_FX=/Users/buzy/JavaFX-SDKs/JavaFX11-SDK/javafx-sdk-11.0.2/lib
-#export PATH_TO_FX=/Users/buzy/JavaFX-SDKs/JavaFX11-SDK/javafx-sdk-14.0.2.1/lib
+# export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home
+# alias setjava8='export JAVA_HOME=$JAVA_8_HOME'
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+# alias setjava17='export JAVA_HOME=$JAVA_17_HOME'
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+
+# export PATH_TO_FX=/Users/buzy/JavaFX-SDKs/JavaFX11-SDK/javafx-sdk-11.0.2/lib
+# export PATH_TO_FX=/Users/buzy/JavaFX-SDKs/JavaFX11-SDK/javafx-sdk-14.0.2.1/lib
+
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 if type brew &>/dev/null
 then
@@ -28,27 +32,27 @@ if which pyenv-virtualenv-init > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-# export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
-export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
+# export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 
-export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
-export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
-export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
-export PYTHON_CONFIGURE_OPTS="--with-tcltk-includes='-I/usr/local/opt/tcl-tk/include' --with-tcltk-libs='-L/usr/local/opt/tcl-tk/lib -ltcl8.6 -ltk8.6'"
+# export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
+# export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
+# export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
+# export PYTHON_CONFIGURE_OPTS="--with-tcltk-includes='-I/usr/local/opt/tcl-tk/include' --with-tcltk-libs='-L/usr/local/opt/tcl-tk/lib -ltcl8.6 -ltk8.6'"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/buzy/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/buzy/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/buzy/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/buzy/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/Users/buzy/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/buzy/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/Users/buzy/opt/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/buzy/opt/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
