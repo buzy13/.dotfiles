@@ -3,19 +3,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-# export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home
-# alias setjava8='export JAVA_HOME=$JAVA_8_HOME'
-
-# export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
-# alias setjava17='export JAVA_HOME=$JAVA_17_HOME'
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
-
-# export PATH_TO_FX=/Users/buzy/JavaFX-SDKs/JavaFX11-SDK/javafx-sdk-11.0.2/lib
-# export PATH_TO_FX=/Users/buzy/JavaFX-SDKs/JavaFX11-SDK/javafx-sdk-14.0.2.1/lib
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
